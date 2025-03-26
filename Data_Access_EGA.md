@@ -1,27 +1,27 @@
 # Instructions on accessing sequencing data and phenotypes from EGA
 
-To access sample information, basic phenotypes, family structure, and quality-trimmed sequencing reads from EGA, you need to follow the instructions provided below:
+To access sample information, basic phenotypes and sequencing reads from EGA, you need to follow the instructions provided below:
 
 ## Prerequisites
 **1**. **To request access to the data**, you will need [to register and validate an account at EGA](https://ega-archive.org/register/). The validation time for new accounts by EGA varies, but it usually takes around 18-24 hours.
 
  ### :bangbang: IN THE MEANTIME, IF YOU HAVE NOT DONE IT YET:
 
-**2**. Read the [LLNEXT DATA ACCESS AGREEMENT](https://groningenmicrobiome.org/?page_id=2598). Access to the LLNEXT Project data will be granted 
+**2**. Read the [CeDNN data access agreement]([insertlink]). Access to the CeDNN Cohort data will be granted 
 to all qualified researchers and will be governed by the provisions laid out in this data access agreement.
 
-**3**. Fill out the [Application Form for Access to Lifelines NEXT Data](https://docs.google.com/forms/d/e/1FAIpQLScUaLZk6Smz66EAqgb0JmzyXLPF3V9mHdvWEuL98qT4yF1j5g/viewform) to indicate that you agree with LLNEXT DATA ACCESS AGREEMENT.
+**3**. Fill out the [Application Form for Access to CeDNN Data]([https://docs.google.com/forms/d/e/1FAIpQLScUaLZk6Smz66EAqgb0JmzyXLPF3V9mHdvWEuL98qT4yF1j5g/viewform](https://forms.office.com/e/2nmhtpt0sr)) to indicate that you agree with the CeDNN data access agreement.
 
 
 
 ## Requesting data via EGA
 1. Login to EGA
    
-2. Request access to datasets from [LifeLines-NEXT pilot study](https://ega-archive.org/studies/EGAS00001005969). To do so, press the 'Request Access' button on the page of the dataset of interest ([LLNEXT Pilot MGS sequencing](https://ega-archive.org/datasets/EGAD00001011293) or [LLNEXT Pilot VLP sequencing](https://ega-archive.org/datasets/EGAD00001011291), or both).
+2. Request access to datasets from the [CeDNN cohort]([insertlink]). To do so, press the 'Request Access' button on the page of the dataset of interest ([CeDNN metagenomic sequencing]([insertlink])).
 
-3. After receiving your **EGA Access Request** and filled **Application Form for Access to Lifelines NEXT Data**, the Data Access Committee will evaluate your request and grant access to the data. We try to do so within 2 weeks.
+3. After receiving your **EGA Access Request** and filled **Application Form for Access to CeDNN Data**, the Data Access Committee will evaluate your request and grant access to the data. We try to do so within 2 weeks.
 
-If there is no approval and no reply within 3 weeks from the date of your **EGA Access Request**, please email us: a.zhernakova@umcg.nl
+If there is no approval and no reply within 3 weeks from the date of your **EGA Access Request**, please email us: i.h.jonkers@umcg.nl.
 
 
 ## Processing data from EGA
@@ -78,42 +78,4 @@ metadata[metadata=="NA"] <- NA
 
 ### Sequencing data:
 
-To download the sequencing data, you need to use [EGA download client: pyEGA3](https://github.com/EGA-archive/ega-download-client). The pyEGA3 has an extensive README.md on installation and usage. Below are details on installation and usage at the HPC of the University of Groningen:
-
-```
-git clone https://github.com/EGA-archive/ega-download-client.git
-
-module load Python
-# Python version: 3.11.3
-
-cd ega-download-client/
-# edit red_hat_dependency_install.sh in the following way:
-# remove all "sudo"
-sh red_hat_dependency_install.sh
-
-# testing installation (I needed -m option here as I am running the script as the module):
-python -m pyega3.pyega3 --help
-
-wget https://raw.githubusercontent.com/EGA-archive/ega-download-client/master/pyega3/config/default_credential_file.json
-
-# edit default_credential_file.json in the following way:
-# "username": "e-mail used for EGA account registration",
-# "password": "password to the EGA account"
-
-mv default_credential_file.json ega-download-client/credential_file.json
-
-# to check which datasets are available for you to download:
-python -m pyega3.pyega3 datasets
-
-# authorized datasets will be visible to you under "Dataset ID":
-# [2023-11-14 16:35:56 +0100] Dataset ID
-# [2023-11-14 16:35:56 +0100] -----------------
-# [2023-11-14 16:35:56 +0100] EGAD00001011291
-# [2023-11-14 16:35:56 +0100] EGAD00001011293
-
-# to download the datasets:
-python -m pyega3.pyega3 -cf credential_file.json fetch EGAD00001011291 --output-dir ../LLNEXT_VLP
-python -m pyega3.pyega3 -cf credential_file.json fetch EGAD00001011293 --output-dir ../LLNEXT_MGS
-
-```
-
+To download the sequencing data, you need to use [EGA download client: pyEGA3](https://github.com/EGA-archive/ega-download-client). The pyEGA3 has an extensive README.md on installation and usage.
