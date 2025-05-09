@@ -7,10 +7,10 @@ To access sample information, basic phenotypes and sequencing reads from EGA, yo
 
  ### :bangbang: IN THE MEANTIME, IF YOU HAVE NOT DONE IT YET:
 
-**2**. Read the [CeDNN data access agreement]([insertlink]). Access to the CeDNN Cohort data will be granted 
+**2**. Read the [CeDNN data access agreement](https://groningenmicrobiome.org/?page_id=3310). Access to the CeDNN Cohort data will be granted 
 to all qualified researchers and will be governed by the provisions laid out in this data access agreement.
 
-**3**. Fill out the [Application Form for Access to CeDNN Data]([https://forms.office.com/e/SRBFqZi0nq]) to indicate that you agree with the CeDNN data access agreement.
+**3**. Fill out the [Application Form for Access to CeDNN Data](https://forms.office.com/e/SRBFqZi0nq) to indicate that you agree with the CeDNN data access agreement.
 
 
 
